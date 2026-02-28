@@ -1,16 +1,43 @@
-# React + Vite
+# Layouts — переключение вида магазина
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![GitHub Pages](https://img.shields.io/badge/View_on-GitHub_Pages-222?style=for-the-badge&logo=github&logoColor=white)](https://madmaxim22.github.io/layouts/)
 
-Currently, two official plugins are available:
+Учебный проект на React: каталог товаров с переключением между видом **карточек** и видом **списка**. Демонстрирует работу с состоянием и обработкой событий.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Возможности
 
-## React Compiler
+- **Карточный вид** — товары в виде сетки карточек с фоновым изображением
+- **Списочный вид** — товары в виде списка с превью
+- Переключение вида по кнопке с иконкой (Material Icons)
+- Кнопка «Add to cart» у каждого товара (UI)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Стек
 
-## Expanding the ESLint configuration
+- **React 19** + **Vite 7**
+- CSS для стилей карточек и списка
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Структура компонентов
+
+| Компонент   | Описание                          |
+|------------|-----------------------------------|
+| `Store`    | Корневой компонент, хранит выбранный вид |
+| `IconSwitch` | Кнопка переключения вида (view_list / view_module) |
+| `CardsView`  | Сетка карточек товаров           |
+| `ListView`   | Список товаров                   |
+| `ShopCard`   | Карточка товара (карточный вид)  |
+| `ShopItem`   | Строка товара (списочный вид)    |
+
+Данные товаров заданы в `src/data/components.js`.
+
+## Запуск
+
+```bash
+# установка зависимостей
+npm install
+
+# режим разработки
+npm run dev
+
+# сборка
+npm run build
+```
