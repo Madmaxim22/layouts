@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { products } from "../data/components";
 import IconSwitch from "./IconSwitch";
+import CardView from "./CardsView";
+import ListView from "./ListView";
 
 function Store() {
     const views = ["Card", "List"];
@@ -11,7 +14,10 @@ function Store() {
 
     return (
         <div className="store">
-            <IconSwitch icon={view === "Card" ? "view_module" : "view_list"} onSwitch={handleSwitch} />
+            <IconSwitch icon={view === "Card" ? "view_list" : "view_module"}
+                onSwitch={handleSwitch} 
+            />
+            {view === "Card" ? <CardView products={products} /> : <ListView products={products} />}
         </div>
     );
 }

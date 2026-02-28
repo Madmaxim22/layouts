@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.store {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-switch {
+  align-self: flex-end;
+  padding: 0;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.icon-switch:hover {
+  opacity: 0.8;
+}
+
+.icon-switch:focus-visible {
+  outline: 2px solid #c02f27;
+  outline-offset: 2px;
+}
+
+/* Card */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-product {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-content {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* List */  
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(216, 214, 214);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.list-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product-color {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c02f27;
+}
+
+.cart-btn {
+  border-radius: 20px;
+  border: 1px solid #c02f27;
+  color: #c02f27;
+  background: transparent;
+  text-transform: uppercase;
+  width: 120px;
+  height: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background-color: #c02f27;
+  color: white;
+}
+
+.cart-btn:focus-visible {
+  outline: 2px solid #c02f27;
+  outline-offset: 2px;
+}

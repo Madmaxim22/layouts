@@ -1,7 +1,7 @@
 function IconSwitch({ icon, onSwitch }) {
     return (
         <button className="icon-switch" onClick={onSwitch}>
-            <span className="material-icon">{icon}</span>
+            <span className="material-icons">{icon}</span>
         </button>
     )
 }
