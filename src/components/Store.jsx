@@ -5,7 +5,6 @@ import CardView from "./CardsView";
 import ListView from "./ListView";
 
 function Store() {
-    const views = ["Card", "List"];
     const [view, setView] = useState("Card");
 
     const handleSwitch = () => {
